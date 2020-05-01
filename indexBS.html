@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> Workout Generator </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="appBS.css">
+    <!-- bootstrap4 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <div class="container-fluid px-0">
+        <p id="primaryHeader" class="h2 text-center m-0">Workout Generator</p>
+
+        <div id="workoutContainer" class="row">
+            <div id="workoutInputSection" class="col-sm-4 px-2">
+                <!--d-flex flex-column justify-content-around"> if we want to space out left column as screen grows?-->
+                <!-- <form action=""> -->
+                <section id="muscleGroupsSection">
+                    <p id="muscleGroupHeader" class="header"> Muscle Groups <span> (Select up to 3) </span></p>
+                    <!-- <div id="muscle_groups_row" class="row"> -->
+                    <div id="muscleGroupsRow" class="d-flex flex-wrap">
+                        <!-- <div id="upper_body" class="col-md-4"> -->
+                        <div id="upper_body" class="d-flex flex-column mr-1">
+                            <p class="mgHeader"><label> Upper Body
+                                </label>
+                                <!--onclick="toggleCheckboxColumn('Upper')"-->
+                            </p>
+                            <label> <input class="Upper" name="muscleGroups" type="checkbox" value="Chest">
+                                Chest</label>
+                            <label> <input class="Upper" name="muscleGroups" type="checkbox" value="Back"> Back </label>
+                            <label> <input class="Upper" name="muscleGroups" type="checkbox" value="Shoulders">
+                                Shoulders
+                            </label>
+                            <label> <input class="Upper" name="muscleGroups" type="checkbox" value="Biceps"> Biceps
+                            </label>
+                            <label> <input class="Upper" name="muscleGroups" type="checkbox" value="Triceps"> Triceps
+                            </label>
+                            <label> <input class="Upper" name="muscleGroups" type="checkbox" value="Forearms"> Forearms
+                            </label>
+                        </div>
+                        <!-- <div class="col-md-4 px-md-0" id="lower_body"> -->
+                        <div id="lowerBody" class="d-flex flex-column mr-1">
+                            <p class="mgHeader"><label> Lower Body
+                                </label>
+
+                            </p>
+                            <label> <input name="muscleGroups" type="checkbox" value="Quads"> Quads </label>
+                            <label> <input name="muscleGroups" type="checkbox" value="Hamstrings"> Hamstrings
+                            </label>
+                            <label> <input name="muscleGroups" type="checkbox" value="Glutes"> Glutes </label>
+                            <label> <input name="muscleGroups" type="checkbox" value="Calves"> Calves </label>
+                        </div>
+                        <!-- <div class="col-md-4 px-md-0" id="full_body"> -->
+                        <div id="fullBody" class="d-flex flex-column mr-1">
+                            <p class="mgHeader"><label> Full Body
+                                </label>
+                                <!--onclick="toggleCheckboxColumn('Full')"-->
+                            </p>
+                            <label> <input name="muscleGroups" type="checkbox" value="Compound Exercises">
+                                Compound
+                                Exercises </label>
+                            <label> <input name="muscleGroups" type="checkbox" value="Abs"> Abs </label>
+                        </div>
+                    </div>
+                </section>
+                <section id="workoutTypeSection">
+                    <p class="header"> Type of Workout</p>
+                    <div id="workoutTypeRow" class="row">
+                        <div id="workoutType" class="col-12">
+                            <label> <input type="radio" name="workoutType" value="Circuit" id="circuitInput" checked>
+                                Circuit </label>
+                            <label> <input type="radio" name="workoutType" value="Superset"> Superset </label>
+                            <label> <input type="radio" name="workoutType" value="RegularLight"> Regular
+                                (Light)
+                            </label>
+                            <label> <input type="radio" name="workoutType" value="RegularMedium"> Regular
+                                (Medium)
+                            </label>
+                            <label> <input type="radio" name="workoutType" value="RegularHeavy"> Regular
+                                (Heavy)
+                            </label>
+                        </div>
+                    </div>
+                </section>
+                <section id="equipment">
+                    <p class="header"> <span onClick="toggleCheckboxColumn('Equipment')">Equipment </span> </p>
+                    <div id="equipmentSection">
+                        <div id="equipmentFirstCol" class="d-flex-column">
+                            <label> <input class="Equipment" type="checkbox" name="Equipment" value="Bodyweight">
+                                Bodyweight </label>
+                            <label> <input class="Equipment" type="checkbox" name="Equipment" value="Dumbbell"> Dumbbell
+                            </label>
+                            <label> <input class="Equipment" type="checkbox" name="Equipment" value="Barbell/Plate">
+                                Barbell/Plate
+                            </label>
+                            <label> <input class="Equipment" type="checkbox" name="Equipment" value="Kettlebell">
+                                Kettlebell
+                            </label>
+                            <label> <input class="Equipment" type="checkbox" name="Equipment" value="Swiss Ball"> Swiss
+                                Ball
+                            </label>
+                        </div>
+                        <div id="equipmentSecondCol" class="d-flex-column">
+                            <label> <input class="Equipment" type="checkbox" name="Equipment" value="Medicine Ball">
+                                Medicine Ball
+                            </label>
+                            <label> <input class="Equipment" type="checkbox" name="Equipment" value="Bosu"> Bosu
+                            </label>
+                            <label> <input class="Equipment" type="checkbox" name="Equipment" value="Machines"> Machines
+                            </label>
+                            <label> <input class="Equipment" type="checkbox" name="Equipment" value="Cable"> Cable
+                            </label>
+                            <label> <input class="Equipment" type="checkbox" name="Equipment" value="TRX"> TRX
+                            </label>
+                        </div>
+                    </div>
+
+                </section>
+                <section id="button">
+                    <div class="row text-center">
+                        <div class="col">
+                            <button id="generateWorkoutBtn" href="#" class="btn-sm my-2" onclick="generateWorkout()">
+                                Generate Workout! </button>
+                            <button id="resetButton" class="btn-sm my-2" onclick="resetInputs()"> Reset Inputs
+                            </button>
+
+                        </div>
+                    </div>
+                </section>
+                <!-- </form> -->
+            </div>
+            <div id="workoutInfoSection" class="col-sm-8">
+                <div class="row h-100">
+                    <div id="workoutTextSection" class="workoutTextList col-7 col-sm-12 col-lg-7 pt-2">
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header reverseColorScheme p-2">
+                                    <h5 id="modalHeaderTitle"> </h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body bg-dark p-2">
+                                    <iframe id="video" src="" width="480" height="270" frameborder="0" scrolling="auto"
+                                        allowfullscreen="true" webkitallowfullscreen="true"
+                                        mozallowfullscreen="true"></iframe>
+                                    <p> Further directions: <a id="link" href="" target="_blank"></a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="workoutImgSection"
+                        class=" col-5 col-sm-12 col-lg-5 px-0 d-flex flex-wrap flex-sm-nowrap flex-lg-wrap">
+                        <img class="img-fluid m-auto p-1 d-none">
+                        <img class="img-fluid m-auto p-1 d-none">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- bootstrap4 -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="logic.js"></script>
+</body>
+
+</html>

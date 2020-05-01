@@ -1,0 +1,95 @@
+#workoutContainer label {
+	margin: .2rem;
+}
+
+#workoutContainer {
+	font-size: .9rem;
+	margin-left: 0px;
+	margin-right: 0px;
+	background-color: #101820FF;
+	color: #F2AA4CFF;
+}
+
+#primaryHeader {
+	background-color: #101820FF;
+	color: #F2AA4CFF;
+	border: 4px solid #F2AA4CFF;
+}
+
+#workoutInputSection {
+	border: 1px solid #F2AA4CFF;
+	border-top: none;
+}
+
+.reverseColorScheme {
+	background-color: #F2AA4CFF;
+	color: #101820FF;
+}
+
+.mgHeader,
+.header {
+	font-weight: bold;
+	margin: 0;
+}
+
+.header {
+	text-decoration: underline;
+	font-size: 1.1rem;
+	margin: .25rem;
+}
+
+#muscleGroupHeader span {
+	font-size: .9rem;
+	font-weight: normal;
+}
+
+#workoutTextSection p {
+	margin-top: 0;
+	margin-bottom: .5rem;
+}
+
+li a {
+	color: black;
+	font-weight: bold;
+}
+
+ol {
+	padding-left: 10px;
+	font-weight: bold;
+	list-style-position: inside;
+}
+
+ol li span {
+	font-weight: normal;
+}
+
+.workoutTextList {
+	counter-reset: ol-index;
+	counter-reset: li-index;
+}
+
+.workoutTextList ol {
+	list-style: none;
+	counter-increment: ol-index;
+	counter-reset: li-index;
+}
+
+.workoutTextList ol li {
+	counter-increment: li-index;
+}
+
+.workoutTextList ol li::before {
+	content: counter(ol-index) counter(li-index, lower-alpha) ". ";
+	/* font-weight: bold; */
+}
+
+@media (min-width: 576px) {
+	img {
+		width: 50%;
+	}
+}
+@media (min-width: 992px) {
+	img {
+		width: 90%;
+	}
+}
