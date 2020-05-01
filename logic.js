@@ -1,4 +1,4 @@
-// test add
+// test git
 var exercises = [
 	{
 		longName: 'Regular Pushup',
